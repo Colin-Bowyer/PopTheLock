@@ -6,4 +6,4 @@ This is a clone of the arcade game Pop the Lock. Toggle the switch either direct
 
 ## Inputs/Outputs
 
-The buttons ans switches are the only inputs. Currently, the lights are the only output, but sound will be added later. The speaker will communicate the high score and play sounds when scoring or losing.
+The buttons ans switches are the only inputs. The speaker plays a sound when scoring and when the player loses. The NeoPixels are used as the main game element.
