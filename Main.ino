@@ -12,6 +12,8 @@ int lastButtonTime;
 void setup() {
   CircuitPlayground.begin();
 
+  analogWrite(A0, 128);
+
   Serial.begin(9600);
   while (!Serial);
 
@@ -49,6 +51,7 @@ void game() {
       buttonFlag = false;
       if(targetX == playerX){
         score++;
+        CircuitPlayground.playTone(440, 50, false);
         newTarget();
       } else{
         lose();
@@ -130,6 +133,9 @@ void lose(){
   for(int i = 0; i < 10; i ++){
     CircuitPlayground.setPixelColor(i, 0xFF0000);
   }
+
+  CircuitPlayground.playTone(220, 500, false);
+
   delay(2000);
 
   CircuitPlayground.clearPixels();
